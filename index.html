@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mirip Siapa Aku di 11 BP 2?</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background">
+    <div class="main-container" id="opening">
+      <!-- Judul di atas logo -->
+      <h1 class="opening-title">Mirip Siapa Kamu di 11 BP 2?</h1>
+
+      <!-- Logo di tengah -->
+      <img src="assets/logo.png" alt="Logo" class="logo" id="logoImage">
+
+      <!-- Tombol lanjut -->
+      <button onclick="showUploadOptions()" class="start-button">Lanjut</button>
+
+      <!-- Teks ajakan di bawah tombol -->
+      <p class="opening-description">Unggah atau ambil fotomu, lalu cari tahu siapa yang paling mirip denganmu di kelas!</p>
+    </div>
+
+    <!-- Upload Options -->
+    <div class="main-container" id="uploadOptions" style="display:none;">
+        <p class="privacy-info">
+  Foto yang kamu unggah tidak disimpan ke sistem, dan tidak akan dilihat oleh siapa pun — termasuk kreator. Data kamu aman dan tidak akan disalahgunakan.
+</p>
+
+      <h2>Ambil atau Unggah Foto Kamu</h2>
+      <div class="button-group">
+        <button onclick="openCamera()">Ambil Foto</button>
+        <input type="file" accept="image/*" id="uploadInput" style="display:none;" onchange="submitImage()">
+        <button onclick="document.getElementById('uploadInput').click()">Unggah Foto</button>
+      </div>
+    </div>
+
+    <!-- Hasil -->
+    <div class="main-container" id="result" style="display:none;">
+      <h2>Kamu mirip...</h2>
+      <img id="randomBp2Photo" src="" alt="Foto Mirip" class="result-image">
+      <h3 id="randomName"></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Footer logo teks -->
+<footer class="footer-logo">
+  <img src="assets/logo-teks.png" alt="Logo Teks Caspernova">
+</footer>
+
+</body>
+</html>
